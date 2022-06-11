@@ -5,6 +5,7 @@ import {
   Search,
   VideoCall,
 } from '@material-ui/icons';
+import './topbar.css';
 
 type Props = {
   user: {
