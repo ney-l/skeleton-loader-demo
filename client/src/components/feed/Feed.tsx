@@ -16,7 +16,6 @@ export const Feed = () => {
         setVideos(res.data);
       })
       .catch((err) => console.log(err));
-    // .then()
   }, []);
 
   return (
