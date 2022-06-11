@@ -1,3 +1,3 @@
 {
-  "conventionalCommits.scopes": ["scaffolding", "api routes"]
+  "conventionalCommits.scopes": ["scaffolding", "api routes", "server"]
 }
