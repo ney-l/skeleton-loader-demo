@@ -7,7 +7,11 @@ import {
 } from '@material-ui/icons';
 import './sidebar.css';
 
-export const Sidebar = () => {
+type Props = {
+  isLoading: boolean;
+};
+
+export const Sidebar = ({ isLoading }: Props) => {
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">

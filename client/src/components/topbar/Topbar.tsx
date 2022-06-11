@@ -5,20 +5,20 @@ import {
   Search,
   VideoCall,
 } from '@material-ui/icons';
+import { TUser } from '../../typings';
 import './topbar.css';
 
 type Props = {
-  user: {
-    avatar: string;
-  };
+  user: TUser | null;
+  isLoading: boolean;
 };
 
 export const Topbar = ({ user }: Props) => {
   return (
     <div className="topbar">
       <div className="topLeft">
-        <img className="logo" src="https://i.ibb.co/KDtnJVY/logo.png" alt="" />
-        <span className="logoText">LamaTube</span>
+        <img className="logo" src={user?.avatar} alt={user?.username} />
+        <span className="logoText">{user?.username}</span>
       </div>
       <div className="topCenter">
         <div className="topSearch">
@@ -33,7 +33,7 @@ export const Topbar = ({ user }: Props) => {
         <VideoCall className="topIcon" />
         <Apps className="topIcon" />
         <Notifications className="topIcon" />
-        <img className="topImg" src={user.avatar} alt="" />
+        <img className="topImg" src={user?.avatar} alt="" />
       </div>
     </div>
   );
