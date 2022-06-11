@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { http } from '../../http';
 import { Post } from '../post/Post';
+import { Skeleton } from '../skeleton/Skeleton';
 import './feed.css';
 
 export const Feed = () => {
@@ -21,9 +22,11 @@ export const Feed = () => {
 
   return (
     <div className="feed">
-      {videos.map((video) => (
-        <Post video={video} />
-      ))}
+      {isLoading ? (
+        <Skeleton type="feed" />
+      ) : (
+        videos.map((video) => <Post video={video} />)
+      )}
     </div>
   );
 };

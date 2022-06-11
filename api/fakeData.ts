@@ -76,7 +76,7 @@ const videos = [
     title: "People think I'm a master coder!",
     views: '13M',
     date: '3 days ago',
-    img: 'https://i.ibb.co/mbK0N40/6.png',
+    img: 'https://images.unsplash.com/photo-1598986646512-9330bcc4c0dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',
     duration: '06:09',
     channel: {
       name: 'Devrella',

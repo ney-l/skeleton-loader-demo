@@ -4,6 +4,8 @@
     "api routes",
     "server",
     "Topbar",
-    "feed"
+    "feed",
+    "App",
+    "user"
   ]
 }
