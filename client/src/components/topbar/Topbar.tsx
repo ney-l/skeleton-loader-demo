@@ -6,6 +6,7 @@ import {
   VideoCall,
 } from '@material-ui/icons';
 import { TUser } from '../../typings';
+import { Skeleton } from '../skeleton/Skeleton';
 import './topbar.css';
 
 type Props = {
@@ -13,7 +14,7 @@ type Props = {
   isLoading: boolean;
 };
 
-export const Topbar = ({ user }: Props) => {
+export const Topbar = ({ isLoading, user }: Props) => {
   return (
     <div className="topbar">
       <div className="topLeft">
@@ -29,12 +30,16 @@ export const Topbar = ({ user }: Props) => {
           <Mic />
         </div>
       </div>
-      <div className="topRight">
-        <VideoCall className="topIcon" />
-        <Apps className="topIcon" />
-        <Notifications className="topIcon" />
-        <img className="topImg" src={user?.avatar} alt="" />
-      </div>
+      {isLoading ? (
+        <Skeleton type="top" />
+      ) : (
+        <div className="topRight">
+          <VideoCall className="topIcon" />
+          <Apps className="topIcon" />
+          <Notifications className="topIcon" />
+          <img className="topImg" src={user?.avatar} alt="" />
+        </div>
+      )}
     </div>
   );
 };

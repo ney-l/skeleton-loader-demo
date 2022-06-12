@@ -6,6 +6,7 @@
     "Topbar",
     "feed",
     "App",
-    "user"
+    "user",
+    "skeleton"
   ]
 }

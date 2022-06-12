@@ -1,7 +1,6 @@
 import './skeleton.css';
 
 export const Skeleton = ({ type }: { type: string }) => {
-  const COUNTER = 8;
   const FeedSkeleton = () => (
     <div className="postSk">
       <div className="postSkImg"></div>
@@ -37,6 +36,28 @@ export const Skeleton = ({ type }: { type: string }) => {
       </>
     );
   }
+
+  const TopSkeleton = () => (
+    <div className="topSk">
+      <div className="topSkIcon"></div>
+      <div className="topSkIcon"></div>
+      <div className="topSkIcon"></div>
+      <div className="topSkImg"></div>
+    </div>
+  );
+
+  if (type === 'top') return <TopSkeleton />;
+
+  const MenuSkeleton = () => (
+    <div className="menuSk">
+      <div className="menuSkItem"></div>
+      <div className="menuSkItem"></div>
+      <div className="menuSkItem"></div>
+      <div className="menuSkItem"></div>
+    </div>
+  );
+
+  if (type === 'menu') return <MenuSkeleton />;
 
   return <FeedSkeleton />;
 };
